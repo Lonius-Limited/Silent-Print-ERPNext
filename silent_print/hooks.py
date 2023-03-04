@@ -131,4 +131,4 @@ app_license = "MIT"
 app_include_js = "assets/js/silent_print.min.js"
 # app_include_css = "assets/js/app.min.css"
 
-page_js = {"point-of-sale" : "public/js/silent_print.js"}
+page_js = {"posapp" : "public/js/silent_print.js"} #point-of-sale
