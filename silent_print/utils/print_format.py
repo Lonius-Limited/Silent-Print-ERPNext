@@ -16,7 +16,7 @@ def set_master_tab(tab_id):
 	frappe.db.sql(query)
 	frappe.publish_realtime("update_master_tab", {"tab_id": tab_id})
 
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)
 def create_pdf(doctype, name, silent_print_format, doc=None, no_letterhead=0):
 	html = frappe.get_print(doctype, name, silent_print_format, doc=doc, no_letterhead=no_letterhead)
 	if not frappe.db.exists("Silent Print Format", silent_print_format):
